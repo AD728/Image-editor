@@ -53,8 +53,8 @@ This Next.js project is an Image Editor application that allows users to upload 
 1. **Installation**: Clone the repository and install dependencies.
 
 ```bash
-git clone 
-cd 
+git clone https://github.com/AD728/Image-editor.git
+cd image-editor
 npm install
 ```
 
