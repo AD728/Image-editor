@@ -19,13 +19,13 @@ export default function MyApp({ Component, pageProps }: any) {
       <div className="flex absolute top-[14px] right-[70px]">
         <select
           className="inline-flex items-center rounded-lg bg-gradient-to-sr px-2 bg-orange-700 hover:bg-orange-900 text-white justify-center whitespace-nowrap  text-sm font-medium disabled:pointer-events-none h-7  w-full"
-          onChange={(e) => toggleTheme(e)}
+          onChange={() => toggleTheme()} // Remove the (e) parameter
         >
           <option value="light">Light</option>
           <option value="dark">Dark</option>
         </select>
       </div>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
