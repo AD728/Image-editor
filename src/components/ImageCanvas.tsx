@@ -1,5 +1,4 @@
-// ImageCanvas.tsx
-import React from "react";
+import React, { LegacyRef } from "react";
 import Image from "next/image";
 
 interface ImageCanvasProps {
@@ -12,7 +11,7 @@ interface ImageCanvasProps {
   textColor: string;
   positionX: number;
   positionY: number;
-  divRef: HTMLDivElement | null;
+  divRef: LegacyRef<HTMLDivElement> | null; // Adjusted type here
 }
 
 const ImageCanvas: React.FC<ImageCanvasProps> = ({

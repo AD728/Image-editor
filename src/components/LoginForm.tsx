@@ -16,22 +16,22 @@ const LoginForm = () => {
   const router = useRouter();
 
   const {
-    watch,
     handleSubmit,
     register,
     formState: { errors },
   } = useForm();
 
-  const getFromLocalStorage = (key: string) => {
+  const getFromLocalStorage = (key: string): string => {
     if (!key || typeof window === "undefined") {
       return "";
     }
-    return localStorage.getItem(key);
+    const item = localStorage.getItem(key);
+    return item ? item : "";
   };
 
   const cred: Login | null =
     getFromLocalStorage("cred") &&
-    JSON.parse(atob(localStorage.getItem("cred")));
+    JSON.parse(atob(getFromLocalStorage("cred")));
 
   const onSubmit = (data: Login) => {
     const { email, password } = data;
